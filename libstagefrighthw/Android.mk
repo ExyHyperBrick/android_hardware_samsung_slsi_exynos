@@ -20,6 +20,10 @@ LOCAL_SRC_FILES := \
 
 LOCAL_CFLAGS += $(PV_CFLAGS_MINUS_VISIBILITY)
 
+ifdef TARGET_SLSI_CLANG_OPT
+LOCAL_CFLAGS += -O3
+endif
+
 LOCAL_C_INCLUDES:= \
       frameworks/native/include/media/hardware \
       frameworks/native/include/media/openmax \

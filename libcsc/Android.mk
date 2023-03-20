@@ -35,6 +35,10 @@ else
 LOCAL_CFLAGS += -DDEFAULT_CSC_HW=5
 endif
 
+ifdef TARGET_SLSI_CLANG_OPT
+LOCAL_CFLAGS += -O3
+endif
+
 ifeq ($(BOARD_USES_FIMC), true)
 LOCAL_SHARED_LIBRARIES += libexynosfimc
 else
